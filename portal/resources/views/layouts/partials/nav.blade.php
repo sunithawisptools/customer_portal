@@ -1,4 +1,5 @@
-<nav class="navbar navbar-default">
+
+<nav class="navbar navbar-default new_head">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -7,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <span class="navbar-brand">
+            <span class="navbar-brand sonarhead">
                 @if(file_exists(base_path("/public/assets/images/logo.png")))
                     <img src="/assets/images/logo.png" height="20px">
                 @else

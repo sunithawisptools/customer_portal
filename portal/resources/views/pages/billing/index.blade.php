@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">{{trans("headers.amountDue")}}</h3>
                     </div>
                     <div class="panel-body">
-                        <p class="attention_text text-center @if($values['amount_due'] > 0) text-danger @endif">
+                        <p class="new_button attention_text text-center @if($values['amount_due'] > 0) text-danger @endif">
                             {{Formatter::currency($values['amount_due'])}}
                         </p>
                         <p>
-                            <a class="btn btn-primary btn-block btn-lg" href="{{action("BillingController@makePayment")}}" role="button">
-                                <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>
+                            <a class="btn btn-primary btn-block btn-lg new_submit" href="{{action("BillingController@makePayment")}}" role="button">
+                                <span class="glyphicon glyphicon-piggy-bank " aria-hidden="true"></span>
                                 {{trans("billing.makePayment")}}
                             </a>
                         </p>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-md-8">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">{{trans("headers.accountDetails")}}</h3>
                     </div>
                     <div class="panel-body">
@@ -69,10 +69,10 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <!-- Nav tabs -->
-                <ul class="nav nav-pills" role="tablist">
-                    <li role="presentation" class="active"><a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab">{{trans("headers.recentTransactions")}}</a></li>
-                    <li role="presentation"><a href="#invoices" aria-controls="invoices" role="tab" data-toggle="tab">{{trans("headers.invoices")}}</a></li>
-                    <li role="presentation"><a href="#creditCards" aria-controls="creditCards" role="tab" data-toggle="tab">{{trans("headers.creditCards")}}</a></li>
+                <ul class="nav nav-pills new_tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#transactions"  aria-controls="transactions" role="tab" data-toggle="tab">{{trans("headers.recentTransactions")}}</a></li>
+                    <li role="presentation"><a href="#invoices"  aria-controls="invoices" role="tab" data-toggle="tab">{{trans("headers.invoices")}}</a></li>
+                    <li role="presentation"><a href="#creditCards"  aria-controls="creditCards" role="tab" data-toggle="tab">{{trans("headers.creditCards")}}</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -156,7 +156,7 @@
                     <div role="tabpanel" class="tab-pane" id="creditCards">
                         <div class="table-responsive">
                             <p class="text-right">
-                                <a class="btn btn-primary btn-sm" href="{{action("BillingController@createPaymentMethod")}}" role="button">
+                                <a class="btn btn-primary btn-sm new_submit" href="{{action("BillingController@createPaymentMethod")}}" role="button">
                                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                     {{trans("billing.addNewCard")}}
                                 </a>

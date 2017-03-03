@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">
                             {{trans("billing.addNewCard")}}
                         </h3>
@@ -26,7 +26,7 @@
                             <label for="name">{{trans("billing.expirationDate")}}</label>
                             {!! Form::tel("expirationDate",null,['id' => 'expirationDate', 'class' => 'form-control', 'placeholder' => trans("billing.expirationDate")]) !!}
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("billing.addNewCard")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("billing.addNewCard")}}</button>
                     </div>
                 </div>
             </div>

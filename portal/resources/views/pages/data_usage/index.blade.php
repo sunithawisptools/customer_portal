@@ -9,7 +9,7 @@
             <div class="panel-body">
                 <div class="progress">
                     <div class="progress-bar @if($usagePercentage < 75) progress-bar-success @elseif($usagePercentage < 90) progress-bar-warning @else progress-bar-danger @endif" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{$usagePercentage}}%;">
-                        <span class="sr-only">{{ $currentUsage['billable'] }}GB / {{ $calculatedCap }}GB</span>
+                        <span class="sr-only ">{{ $currentUsage['billable'] }}GB / {{ $calculatedCap }}GB</span>
                     </div>
                 </div>
                 <p class="text-center bigger_text @if($currentUsage['billable'] > $calculatedCap) text-danger @else text-info @endif">
@@ -29,18 +29,18 @@
         </div>
         @else
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading new_subhead">
                     <h3 class="panel-title">{{trans("headers.currentUsage")}}</h3>
                 </div>
                 <div class="panel-body">
-                    <p class="text-center bigger_text text-info">
+                    <p class="new_tabs text-center bigger_text text-info">
                         {{ $currentUsage['billable'] }}GB
                     </p>
                 </div>
             </div>
         @endif
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading new_subhead">
                 <h3 class="panel-title">{{trans("headers.dataUsage")}}</h3>
             </div>
             <div class="panel-body">

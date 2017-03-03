@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">{{trans("headers.myDetails")}}</h3>
                     </div>
                     <div class="panel-body">
@@ -37,14 +37,14 @@
                             <label for="fax">{{trans("profile.fax")}}</label>
                             {!! Form::tel("fax",$phoneNumbers[\SonarSoftware\CustomerPortalFramework\Models\PhoneNumber::FAX],['id' => 'fax', 'class' => 'form-control', 'placeholder' => trans("profile.fax")]) !!}
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("profile.updateProfile")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("profile.updateProfile")}}</button>
                         {!! Form::close() !!}
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">{{trans("headers.changePassword")}}</h3>
                     </div>
                     <div class="panel-body">
@@ -61,7 +61,7 @@
                             <label for="new_password_confirmation">{{trans("profile.newPasswordConfirmed")}}</label>
                             {!! Form::password("new_password_confirmation",['id' => 'new_password_confirmation', 'class' => 'form-control', 'placeholder' => trans("profile.newPasswordConfirmed")]) !!}
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("profile.changePassword")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("profile.changePassword")}}</button>
                         {!! Form::close() !!}
                     </div>
                 </div>

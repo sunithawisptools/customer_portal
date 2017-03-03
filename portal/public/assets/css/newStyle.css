@@ -1,0 +1,46 @@
+.new_button
+{
+  font-family : rubik;
+  color : #5f1797;
+}
+.new_head
+{
+     background-image: linear-gradient(to bottom,#5f1797 0,#5f1797 100%) !important;
+     color:  #fff !important;
+     border-color: #5f1797 !important;
+}
+.new_head li a
+{
+    color:  #fff !important;
+}
+.new_head .active a{
+    color:  #000 !important;
+        background-image: -webkit-linear-gradient(top,#fff 0,#fff 100%) !important;
+}
+
+.new_submit
+{
+     background-image: linear-gradient(to bottom,#773fa4 0,#5f1797 100%) !important;
+}
+.new_submit:hover
+{
+    background-color: #5f1797 !important;
+}
+
+.new_tabs
+{
+    color:  #5f1797 !important;
+}
+.new_tabs li.active a
+{
+    background-color: #5f1797 !important;
+    color: #fff !important;
+}
+.new_tabs a
+{
+    color: #5f1797 !important;
+}
+.new_subhead{
+     background-image: linear-gradient(to bottom,#773fa4 0,#5f1797 100%) !important;
+    color: #fff !important; 
+}

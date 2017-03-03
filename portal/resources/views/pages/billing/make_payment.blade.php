@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">
                             {{trans("headers.makeAPayment")}}
                         </h3>
@@ -43,7 +43,7 @@
                             </label>
                             <p style="display: none;" id="autoPayDescription" class="help-block">{{trans("billing.autoPayDescription")}}</p>
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("billing.submitPayment")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("billing.submitPayment")}}</button>
                         {!! Form::close() !!}
                     </div>
                 </div>
