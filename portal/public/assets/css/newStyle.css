@@ -21,6 +21,9 @@
 .new_submit
 {
      background-image: linear-gradient(to bottom,#773fa4 0,#5f1797 100%) !important;
+     background-color: #5f1797 !important;
+     background-repeat: repeat-x;
+     border-color: #5f1797 !important;
 }
 .new_submit:hover
 {
