@@ -15,16 +15,16 @@
                 <div class="well">
                     {!! Form::open(['action' => 'AuthenticationController@authenticate']) !!}
                     <div class="form-group">
-                        <label for="username">{{trans("root.username")}}</label>
+                        <label for="username" class="new_tabs">{{trans("root.username")}}</label>
                         {!! Form::text("username",null,['placeholder' => trans("root.username"), 'id' => 'username', 'class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
-                        <label for="password">{{trans("root.password")}}</label>
+                        <label for="password" class="new_tabs">{{trans("root.password")}}</label>
                         {!! Form::password("password",['placeholder' => trans("root.password"), 'id' => 'password', 'class' => 'form-control']) !!}
                     </div>
-                    <button type="submit" class="btn btn-primary">{{trans("actions.login")}}</button>
+                    <button type="submit" class="btn btn-primary new_submit">{{trans("actions.login")}}</button>
                     <small style="margin-left: 3em;">
-                        <a href="{{action("AuthenticationController@showResetPasswordForm")}}">{{trans("root.forgot")}}</a>
+                        <a class="new_tabs" href="{{action("AuthenticationController@showResetPasswordForm")}}">{{trans("root.forgot")}}</a>
                     </small>
                     {!! Form::close() !!}
                 </div>
@@ -33,7 +33,7 @@
         <div class="row" style="margin-top: 1em;">
             <div class="col-md-4 col-md-offset-4">
                 <p>
-                    <a class="btn btn-success center-block" href="{{action("AuthenticationController@showRegistrationForm")}}" role="button">{{trans("root.register")}}</a>
+                    <a class="btn btn-success center-block new_submit" href="{{action("AuthenticationController@showRegistrationForm")}}" role="button">{{trans("root.register")}}</a>
                 </p>
             </div>
         </div>

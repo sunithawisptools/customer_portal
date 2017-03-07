@@ -12,8 +12,8 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
+                <div class="panel panel-default new_col">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">{{trans("headers.forgotUsernameOrPassword")}}</h3>
                     </div>
                     <div class="panel-body">
@@ -22,14 +22,14 @@
                         </p>
                         {!! Form::open(['action' => 'AuthenticationController@sendResetEmail', 'id' => 'passwordResetForm', 'method' => 'post']) !!}
                         <div class="form-group">
-                            <label for="email">{{trans("register.email")}}</label>
+                            <label for="email" class="new_tabs">{{trans("register.email")}}</label>
                             {!! Form::email("email",null,['id' => 'email', 'class' => 'form-control', 'placeholder' => trans("register.email")]) !!}
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("actions.sendResetEmail")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("actions.sendResetEmail")}}</button>
                         {!! Form::close() !!}
                     </div>
                 </div>
-                <p>
+                <p class="new_label">
                     <a href="{{action("AuthenticationController@index")}}">{{trans("register.back")}}</a>
                 </p>
             </div>

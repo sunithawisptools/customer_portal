@@ -28,6 +28,7 @@
 .new_submit:hover
 {
     background-color: #5f1797 !important;
+     border-color: #5f1797 !important;
 }
 
 .new_tabs
@@ -46,4 +47,12 @@
 .new_subhead{
      background-image: linear-gradient(to bottom,#773fa4 0,#5f1797 100%) !important;
     color: #fff !important; 
+}
+.new_label a
+{
+    color: #fff !important;
+}
+.new_col
+{
+    border-color: #5f1797 !important;
 }
