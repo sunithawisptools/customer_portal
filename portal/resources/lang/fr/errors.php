@@ -1,0 +1,47 @@
+<?php
+return [
+    'notAuthenticated' => 'Votre session a expiré, veuillez vous connecter à nouveau.',
+    'loginFailed' => "Nom d'utilisateur ou mot de passe incorrect.",
+    'invalidCreditCardNumber' => "Ce numéro de carte de crédit n'est pas valide.",
+    'invalidExpirationDate' => 'Cette carte de crédit a expiré.',
+    'paymentFailed' => 'Paiement échoué. Veuillez vérifier la carte et réessayer.',
+    'failedToUpdateProfile' => 'Échec de la mise à jour du profil. Veuillez réessayer plus tard.',
+    'currentPasswordInvalid' => 'Ce mot de passe est incorrect.',
+    'failedToDownloadInvoice' => 'Impossible de télécharger la facture. Veuillez réessayer plus tard.',
+    'mustSetEmailAddress' => 'Vous devez définir votre adresse de courrier électronique avant de pouvoir créer un ticket.',
+    'sectionDisabled' => 'Cette section est désactivée.',
+    'failedToCreateTicket' => 'Impossible de créer le ticket. Veuillez réessayer plus tard.',
+    'invalidTicketID' => "Ce n'est pas un ID de billet valide.",
+    'tooManyFailedAuthenticationAttempts' => "Vous avez eu trop d'échecs d'authentification. S'il vous plait attendez quelques minutes et réessayez.',
+    'emailLookupFailed' => 'Ce courrier électronique n'a pas été trouvé ou a déjà un compte associé. Essayez le lien nom d'utilisateur ou mot de passe oublié.',
+    'emailSendFailed' => 'Échec de l'envoi du courrier électronique. Veuillez réessayer plus tard.
+",
+    'invalidToken' => "Désolé, ce jeton n'est pas valide. Veuillez réessayer.
+",
+    'accountCreationFailed' => "Impossible de créer le compte. Veuillez essayer un nom d'utilisateur différent.",
+    'tooManyFailedLookupAttempts' => "Vous avez cherché trop d'adresses e-mail dans un court laps de temps. S'il vous plait attendez quelques minutes et réessayez.",
+    'tooManyPasswordResetRequests' => "Vous avez essayé de réinitialiser un mot de passe trop souvent. S'il vous plait attendez quelques minutes et réessayez.",
+    'resetLookupFailed' => "Cette adresse e-mail n'a pas de compte associé. S'il vous plaît, vérifiez et essayez à nouveau.",
+    'resetTokenNotValid' => "Le jeton de réinitialisation de mot de passe n'est pas valide. Veuillez réessayer.",
+    'invalidEmailAddress' => "L'adresse mail n'est pas la même. Veuillez réessayer.",
+    'tooManyFailedCreationAttempts' => "Vous avez échoué à créer un compte trop de fois dans un court laps de temps. S'il vous plait attendez quelques minutes et réessayez.",
+    'tooManyFailedPasswordResets' => "Vous n'avez pas réinitialiser votre mot de passe trop de fois dans un court laps de temps. S'il vous plait attendez quelques minutes et réessayez.",
+    'couldNotFindAccount' => "Désolé, mais votre compte n'a pas pu être trouvé. Veuillez réessayer plus tard ou essayer d'enregistrer un nouveau compte.
+",
+    'failedToResetPassword' => 'Échec de la restauration du mot de passe Veuillez réessayer plus tard.
+',
+    'tokenMismatch' => 'On dirait que vous avez peut-être été inactif trop longtemps. Veuillez réessayer.',
+    'failedToPostReply' => 'Impossible de publier une réponse. Veuillez réessayer plus tard.',
+    'paymentMethodNotFound' => "Cette méthode de paiement n'a pas pu être trouvée. Peut-être qu'il a déjà été supprimé.",
+    'failedToCreateCard' => "Échec de l'ajout de la carte. Veuillez vérifier le numéro et la date d'expiration et réessayer.",
+    'paypalFailed' => 'Échec du paiement via PayPal. Essayez une autre méthode.
+',
+    'missingPaypalInformation' => "Certaines informations manquaient dans PayPal et ce paiement n'a pas été appliqué. Veuillez nous contacter pour obtenir de l'aide.",
+    'paypalGenericError' => "Une erreur s'est produite lors du traitement du paiement PayPal.",
+    'paymentNotApproved' => "Le paiement n'a pas été approuvé par PayPal. Veuillez vérifier votre compte PayPal pour plus de détails.",
+    'paypalTokenInvalid' => "Les données fournies ne sont pas valides et aucun paiement n'a été appliqué à votre compte.",
+    'failedToApplyPaypalPayment' => "Impossible d'appliquer le paiement à votre compte. Veuillez ne pas traiter un autre paiement, et contactez-nous pour obtenir de l'aide.",
+    'topOffNotAvailable' => "Votre service de données n'autorise pas les achats au sommet.",
+    'topOffRequiresImmediatePayment' => "L'achat d'une capacité supplémentaire nécessite un paiement immédiat.",
+    'failedToAddDataUsage' => "Impossible d'ajouter de la capacité à votre compte. Veuillez réessayer plus tard.",
+];
