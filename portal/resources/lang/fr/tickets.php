@@ -1,0 +1,20 @@
+<?php
+return [
+    'createNewTicket' => 'Créer un nouveau ticket',
+    'subject' => 'Subject',
+    'subjectLong' => 'Veuillez fournir une brève description du problème.',
+    'description' => 'La description',
+    'descriptionLong' => 'Veuillez décrire le problème avec le plus de détails possible.',
+    'noTickets' => "Il n'y a actuellement aucun billet disponible pour le visionnement.",
+    'ticketCreated' => 'Ticket créé avec succès.',
+    'noRepliesYet' => "Il n'y a pas encore de réponses à ce billet. Veuillez revenir plus tard.",
+    'youWrote' => 'Tu as écrit:',
+    'ispWrote' => ':companyName a écrit:',
+    'postAReply' => 'Écrire une réponse',
+    'postAReplyPlaceholder' => 'Entrez votre réponse au billet ici.',
+    'status' => 'Statut',
+    'waitingYourResponse' => 'En attendant votre réponse',
+    'waitingIspResponse' => 'Attente de la réponse :companyName',
+    'closed' => 'Billet fermé',
+    'replyPosted' => 'La réponse au ticket a été envoyée avec succès.',
+];
