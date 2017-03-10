@@ -1,8 +1,8 @@
 <?php
 return [
-    'logOut' => 'Connectez - Out',
+    'logOut' => 'Déconnexion',
     'billing' => 'Facturation',
-    'profile' => 'Mes Details',
+    'profile' => 'Mes infos',
     'tickets' => 'Billets de support',
     'dataUsage' => "L'utilisation de données",
     'contracts' => 'Contrats',

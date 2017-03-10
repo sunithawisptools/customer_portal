@@ -1,6 +1,6 @@
 <?php
 return [
-    'date' => 'Rendez-vous amoureux',
+    'date' => 'Date',
     'amount' => 'Montant',
     'accountNumber' => 'Numéro de compte',
     'notAvailable' => 'Indisponible',

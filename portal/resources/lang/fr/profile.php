@@ -1,6 +1,6 @@
 <?php
 return [
-    'name' => 'prénom',
+    'name' => 'Nom',
     'role' => 'Rôle',
     'emailAddress' => 'Adresse e-mail',
     'updateProfile' => 'Mettre à jour le profil',
@@ -10,7 +10,7 @@ return [
     'fax' => 'Numéro de fax',
     'profileUpdated' => 'Profil mis à jour.',
     'currentPassword' => 'Mot de passe actuel',
-    'newPassword' => 'nouveau mot de passe',
+    'newPassword' => 'Nouveau mot de passe',
     'newPasswordConfirmed' => 'Confirmez le mot de passe',
     'changePassword' => 'Changer le mot de passe',
     'passwordUpdated' => 'Mot de passe mis à jour avec succès.',

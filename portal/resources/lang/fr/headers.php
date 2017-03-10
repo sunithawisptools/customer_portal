@@ -2,7 +2,7 @@
 return [
     'amountDue' => 'Montant dû',
     'accountDetails' => 'Details du compte',
-    'recentTransactions' => 'transactions récentes',
+    'recentTransactions' => 'Transactions',
     'invoices' => 'Factures',
     'makeAPayment' => 'Effectuer un paiement',
     'paymentSucceeded' => 'Paiement réussi!',
