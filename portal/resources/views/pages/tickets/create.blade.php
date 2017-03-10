@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading new_subhead">
                         <h3 class="panel-title">{{trans("headers.createTicket")}}</h3>
                     </div>
                     <div class="panel-body">
@@ -17,7 +17,7 @@
                             <label for="description">{{trans("tickets.description")}}</label>
                             {!! Form::textarea("description",null,['class' => 'form-control', 'id' => 'description', 'placeholder' => trans("tickets.descriptionLong")]) !!}
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("actions.createTicket")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("actions.createTicket")}}</button>
                         {!! Form::close() !!}
                     </div>
                 </div>

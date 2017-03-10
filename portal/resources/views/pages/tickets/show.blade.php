@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading new_subhead">
                 <h3 class="panel-title">{{trans("headers.ticket")}}</h3>
             </div>
             <div class="panel-body">
@@ -46,7 +46,7 @@
                     <label for="reply">{{trans("tickets.postAReply")}}</label>
                     {!! Form::textarea("reply",null,['class' => 'form-control', 'id' => 'reply', 'placeholder' => trans("tickets.postAReplyPlaceholder")]) !!}
                 </div>
-                <button type="submit" class="btn btn-primary">{{trans("actions.postReply")}}</button>
+                <button type="submit" class="btn btn-primary new_submit">{{trans("actions.postReply")}}</button>
                 {!! Form::close() !!}
             </div>
         </div>

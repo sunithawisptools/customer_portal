@@ -2,12 +2,12 @@
 @section('content')
     <div class="container">
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading new_subhead">
                 <h3 class="panel-title">{{trans("headers.tickets")}}</h3>
             </div>
             <div class="panel-body">
                 <p>
-                    <a class="btn btn-primary btn-lg" href="{{action("TicketController@create")}}" role="button">
+                    <a class="btn btn-primary btn-lg new_submit" href="{{action("TicketController@create")}}" role="button">
                         {{trans("tickets.createNewTicket")}}
                     </a>
                 </p>

@@ -56,7 +56,7 @@ return [
     /*
      * If you wish to allow users to open tickets, and respond to their public tickets, then set this to true
      */
-    'ticketing_enabled' => env('TICKETING_ENABLED',false),
+    'ticketing_enabled' => env('TICKETING_ENABLED',true),
 
     /*
      * If ticketing is enabled, you must set the ID of an inbound email account here that will be used to create new tickets
@@ -101,5 +101,5 @@ return [
     /**
      * CONTRACTS
      */
-    'contracts_enabled' => env('CONTRACTS_ENABLED',false),
+    'contracts_enabled' => env('CONTRACTS_ENABLED',true),
 ];
