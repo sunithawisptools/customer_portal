@@ -16,7 +16,8 @@
  * Unauthenticated routes, place any routes here that do not require prior authentication.
  */
 Route::group(['middleware' => ['web']], function () {
-
+    
+     Route::get('/totalPayment','SearchController@paymentCalculation');
      
     //Unauthenticated routes
     Route::get('/','AuthenticationController@index');
@@ -100,6 +101,7 @@ Route::group(['prefix' => 'portal', 'middleware' => ['web','auth']], function(){
        Route::group(['prefix' => 'search'], function(){
         Route::get("/accounts","SearchController@searchAccount");
         Route::get("/invoices","SearchController@searchPayment");
+        Route::get("/trans","SearchController@searchTransaction");
     });
     
     

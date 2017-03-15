@@ -23,4 +23,9 @@ class SearchController
         $result = $this->httpHelper->post("/search/" . $entity,['size'=>100,'page'=>1]);
         return $result;
     }
+    public function getAccountPayment($id)
+    {
+        $result = $this->httpHelper->get("/accounts/" . $id."/transactions/payments");
+        return $result;
+    }
 }

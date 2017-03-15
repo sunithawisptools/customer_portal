@@ -14,15 +14,6 @@ class SearchController extends Controller
         $this->apiController = new \SonarSoftware\CustomerPortalFramework\Controllers\SearchController();
     }
 
-//    public function index()
-//    {
-//        /**
-//         * This is not cached, as signing a contract outside the portal cannot be detected, and so would create invalid information display here.
-//         */
-//        $contracts = $this->apiController->getContracts(get_user()->account_id, 1);
-//        return view("pages.contracts.index",compact('contracts'));
-//    }
-
     /**
      * @param $id
      * @return \Illuminate\Http\Response
@@ -30,18 +21,69 @@ class SearchController extends Controller
     public function searchAccount()
     {
         $details= $this->apiController->complexSearch("accounts");
-        $det=json_encode((array)$details->results);
-        echo $det;
-        return;
+       print_r($details);
+    
       
     }
     public function searchPayment()
     {
         $details= $this->apiController->complexSearch("invoices");
-        $det=json_encode((array)$details->results);
-        echo $det;
-        return;
+       print_r($details);
     
+    }
+    public function searchTransaction()
+    {
+        $details=$this->apiController->getAccountPayment(1);
+        print_r($details);
+    }
+     public function paymentCalculation()
+    {
+        $account_details= $this->apiController->complexSearch("accounts");
+        $account=json_encode($account_details->results);
+        echo "</br>";
+        $account_json = json_decode($account, true);
+        $i=0;
+        foreach($account_json as $values)
+        {
+            if($values)
+            {
+            echo "Name : ".$account_json[$i]["name"];
+            echo "<br/>";
+            echo "Account Id : ".$account_json[$i]["id"];
+            echo "<br/>";
+            $id=$account_json[$i]["id"];
+            $trans_details=$this->apiController->getAccountPayment($id);
+            if($trans_details)
+                {
+                   $trans=json_encode($trans_details);
+                   $trans_json = json_decode($trans, true);
+                   $sum=0;
+                   echo "<h3>Transactions</h3>";
+                   $num=1;
+                   foreach($trans_json as $data)
+                   {
+                       echo $num.".  $".$data["amount"];
+                       echo "  (".$data["date"].")";
+                       $sum=$sum +$data["amount"];
+                       $num++;
+                       echo "<br/>";
+                   }
+                   echo "TOTAL PAYMENT :$".$sum;
+                   echo "</br>";
+                }
+            else 
+                {
+                   echo "<h3>No Transactions</h3>";
+                }
+                echo "</br>";
+                echo "---------------------------------";
+                echo "</br>";
+            $i++;
+            
+            
+            }
+        }
+        return;
       
     }
 }
