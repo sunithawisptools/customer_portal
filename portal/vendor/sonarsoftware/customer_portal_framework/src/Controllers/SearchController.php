@@ -18,14 +18,23 @@ class SearchController
 
  
   
-    public function complexSearch($entity)
-    {
-        $result = $this->httpHelper->post("/search/" . $entity,['size'=>100,'page'=>1]);
+    public function complexSearch($entity,$size,$page,$from_date,$to_date)
+    {  
+        $post_data = array(
+	  'size' => $size,
+	  'page' => $page,
+	  'search'=> array(
+	    "date_limits" => array(
+	      array(
+	        "field" => "datetime",
+		"from" => $from_date,
+		"to" => $to_date
+	      )
+	    )
+	  )
+	);
+        $result = $this->httpHelper->post("/search/". $entity, $post_data);
         return $result;
     }
-    public function getAccountPayment($id)
-    {
-        $result = $this->httpHelper->get("/accounts/" . $id."/transactions/payments");
-        return $result;
-    }
+
 }

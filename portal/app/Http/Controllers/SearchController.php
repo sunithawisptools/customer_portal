@@ -20,70 +20,45 @@ class SearchController extends Controller
      */
     public function searchAccount()
     {
-        $details= $this->apiController->complexSearch("accounts");
-       print_r($details);
-    
-      
-    }
-    public function searchPayment()
-    {
-        $details= $this->apiController->complexSearch("invoices");
-       print_r($details);
-    
-    }
-    public function searchTransaction()
-    {
-        $details=$this->apiController->getAccountPayment(1);
+        $size=100;
+        $page=1;
+        $details= $this->apiController->complexSearch("accounts",$size,$page);
         print_r($details);
-    }
-     public function paymentCalculation()
-    {
-        $account_details= $this->apiController->complexSearch("accounts");
-        $account=json_encode($account_details->results);
-        echo "</br>";
-        $account_json = json_decode($account, true);
-        $i=0;
-        foreach($account_json as $values)
-        {
-            if($values)
-            {
-            echo "Name : ".$account_json[$i]["name"];
-            echo "<br/>";
-            echo "Account Id : ".$account_json[$i]["id"];
-            echo "<br/>";
-            $id=$account_json[$i]["id"];
-            $trans_details=$this->apiController->getAccountPayment($id);
-            if($trans_details)
-                {
-                   $trans=json_encode($trans_details);
-                   $trans_json = json_decode($trans, true);
-                   $sum=0;
-                   echo "<h3>Transactions</h3>";
-                   $num=1;
-                   foreach($trans_json as $data)
-                   {
-                       echo $num.".  $".$data["amount"];
-                       echo "  (".$data["date"].")";
-                       $sum=$sum +$data["amount"];
-                       $num++;
-                       echo "<br/>";
-                   }
-                   echo "TOTAL PAYMENT :$".$sum;
-                   echo "</br>";
-                }
-            else 
-                {
-                   echo "<h3>No Transactions</h3>";
-                }
-                echo "</br>";
-                echo "---------------------------------";
-                echo "</br>";
-            $i++;
-            
-            
-            }
-        }
-        return;
+    
       
     }
+    public function paymentCalculation()
+    {
+        $size=2;
+        $page=1;
+        $from_date="2017-03-14 00:00:00";
+        $to_date="2017-03-16 00:00:00";
+        $data= $this->apiController->complexSearch("payments",$size,$page,$from_date,$to_date);
+        $data_values=$data->results;
+        $page_values=$data->paginator;
+        $total_page=$page_values->total_pages;
+        $sum=0;
+        $page=$page_values->current_page;
+        for($i=1;$i<=$total_page;$i++)
+        {
+             $page=$i;
+             $payment_data= $this->apiController->complexSearch("payments",$size,$page,$from_date,$to_date);
+             $payment_values=$payment_data->results;
+             echo "<h4>page=".$page."</h4>";
+             foreach($payment_values as $temp)
+             {
+                 if($temp)
+                 {
+                     echo "</br>";
+                     echo "Amount :".$temp->amount;
+                   $sum=$sum+$temp->amount;
+                 }
+             }
+        }
+        echo "</br>";
+        echo "</br>";
+        echo "<h4>Sum= ".$sum."</h4>";
+        
+    }
+
 }
