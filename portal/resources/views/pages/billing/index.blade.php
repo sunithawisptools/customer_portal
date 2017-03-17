@@ -69,7 +69,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <!-- Nav tabs -->
-                <ul class="nav nav-pills" role="tablist">
+                <ul class="nav nav-pills new_tabs" role="tablist">
                     @if(Config::get("customer_portal.show_detailed_transactions") == true)
                         <li role="presentation" class="active"><a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab">{{trans("headers.recentTransactions")}}</a></li>
                         <li role="presentation"><a href="#invoices" aria-controls="invoices" role="tab" data-toggle="tab">{{trans("headers.invoices")}}</a></li>

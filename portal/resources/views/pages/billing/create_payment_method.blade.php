@@ -54,7 +54,7 @@
                                 </label>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">{{trans("billing.addNewCard")}}</button>
+                        <button type="submit" class="btn btn-primary new_submit">{{trans("billing.addNewCard")}}</button>
                     </div>
                 </div>
             </div>
