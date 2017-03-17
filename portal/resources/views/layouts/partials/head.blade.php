@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="/assets/css/newStyle.css">
     <link rel="stylesheet" href="/assets/css/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/js/vendor/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="/assets/css/global.css">
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
@@ -20,8 +21,6 @@
     <script src="/assets/js/html5shiv.min.js"></script>
     <script src="/assets/js/respond.min.js"></script>
     <![endif]-->
-    <script src="/assets/lang.dist.js" type="text/javascript"></script>
-
+    <script src="/messages.js" type="text/javascript"></script>
     @yield('additionalCSS')
-
 </head>
