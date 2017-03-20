@@ -44,4 +44,5 @@ return [
     'topOffNotAvailable' => "Votre service de données n'autorise pas les achats au sommet.",
     'topOffRequiresImmediatePayment' => "L'achat d'une capacité supplémentaire nécessite un paiement immédiat.",
     'failedToAddDataUsage' => "Impossible d'ajouter de la capacité à votre compte. Veuillez réessayer plus tard.",
+    'failedToLookupSubdivision' => "Nous n'avons pas été en mesure de chercher les États pour ce pays. Veuillez actualiser et réessayer.",
 ];

@@ -24,4 +24,5 @@ return [
     'currentUsage' => 'Utilisation actuelle',
     'purchaseAdditionalData' => 'Acheter des données supplémentaires',
     'contracts' => 'Contrats',
+    'error' => 'Oups!',
 ];
