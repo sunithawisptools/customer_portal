@@ -25,10 +25,29 @@ return [
      */
     'currency_symbol' => env('CURRENCY_SYMBOL','$'),
 
+    /**
+     * The country your ISP operates in
+     */
+    'country' => env('COUNTRY','US'),
+
+    /**
+     * The state or province your ISP operates in. Should be a two character code for the US and Canada (e.g. WI, AB) and the full name for other countries.
+     */
+    'state' => env('STATE',null),
+
+    /**
+     * A message to display on the login page
+     */
+    'login_page_message' => env('LOGIN_PAGE_MESSAGE',null),
 
     /**
      * BILLING CONFIGURATION OPTIONS
      */
+
+    /**
+     * Do you want to show detailed transactions or just invoices?
+     */
+    'show_detailed_transactions' => env('SHOW_DETAILED_TRANSACTIONS',false),
 
     /*
      * If you wish to allow PayPal payments via the portal, set this to true

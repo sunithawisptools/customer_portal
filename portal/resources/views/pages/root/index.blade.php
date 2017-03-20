@@ -4,12 +4,22 @@
         <div class="row">
             <div class="col-md-12 give_bottom_room">
                 @if(file_exists(base_path("/public/assets/images/logo.png")))
-                    <img src="/assets/images/logo.png" class="center-block">
+                    <img src="/assets/images/logo.png" class="center-block logoImage">
                 @else
-                    <img src="/assets/images/transparent_logo.png" class="center-block">
+                    <img src="/assets/images/transparent_logo.png" class="center-block logoImage">
                 @endif
             </div>
         </div>
+        @if(Config::get("customer_portal.login_page_message"))
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="alert alert-info" role="alert">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        {{Config::get("customer_portal.login_page_message")}}
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div class="well">
