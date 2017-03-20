@@ -27,25 +27,42 @@ class SearchController extends Controller
     
       
     }
-    public function paymentCalculation()
+    public function complexSearch($entity,$from_date,$to_date)
     {
-        $size=2;
+        $trans_array=array();
+        $size=1;
         $page=1;
-        $from_date="2017-03-14 00:00:00";
-        $to_date="2017-03-16 00:00:00";
-        $data= $this->apiController->complexSearch("payments",$size,$page,$from_date,$to_date);
+        $data= $this->apiController->complexSearch($entity,$size,$page,$from_date,$to_date);
         $data_values=$data->results;
         $page_values=$data->paginator;
         $total_page=$page_values->total_pages;
-        $sum=0;
-        $page=$page_values->current_page;
-        for($i=1;$i<=$total_page;$i++)
+        foreach($data_values as $temp)
         {
-             $page=$i;
-             $payment_data= $this->apiController->complexSearch("payments",$size,$page,$from_date,$to_date);
-             $payment_values=$payment_data->results;
-             echo "<h4>page=".$page."</h4>";
-             foreach($payment_values as $temp)
+            $trans_array[]=$temp;
+           
+        }
+        if($total_page>1)
+        {
+            for($i=2;$i<=$total_page;$i++)
+            {
+                $data= $this->apiController->complexSearch($entity,$size,$i,$from_date,$to_date);
+                $data_values=$data->results;
+                foreach($data_values as $temp)
+                 {
+                   $trans_array[]=$temp;
+                 }
+            }
+        }
+        
+        return $trans_array;
+       
+    }
+    public function paymentCalculation()
+    {
+        
+        $sum=0;
+        $trans_data=$this->complexSearch("payments","2017-03-14 00:00:00","2017-03-16 00:00:00");
+         foreach($trans_data as $temp)
              {
                  if($temp)
                  {
@@ -54,11 +71,9 @@ class SearchController extends Controller
                    $sum=$sum+$temp->amount;
                  }
              }
-        }
         echo "</br>";
-        echo "</br>";
-        echo "<h4>Sum= ".$sum."</h4>";
-        
+        echo "SUM: ".$sum;
+    
     }
 
 }
