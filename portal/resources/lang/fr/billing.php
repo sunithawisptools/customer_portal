@@ -47,4 +47,9 @@ return [
     'paypalSuccess' => 'Paiement PayPal effectué avec succès. Le paiement a été appliqué à votre compte.',
     'paypalCancelled' => 'Le paiement PayPal a été annulé.',
     'totalBalance' => 'Solde total',
+    'line1' => 'Adresse',
+    'city' => 'Ville',
+    'state' => 'Province',
+    'zip' => 'Code postal',
+    'country' => 'Pays',
 ];
