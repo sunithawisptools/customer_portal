@@ -1,6 +1,6 @@
 <?php
 return [
-    'login' => 'Login',
+    'login' => 'Entrer',
     'makePayment' => 'Faire un paiement',
     'createTicket' => 'Créer un ticket',
     'lookupEmail' => 'Rechercher adresse e-mail',
