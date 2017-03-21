@@ -1,3 +1,19 @@
+.allContent{
+    background-color: #000 !important;
+}
+.logBlock
+{
+    background-color: #5f1797;
+    padding-left: inherit;
+    padding-right: inherit;
+    
+}
+.log_button{
+    width: fit-content;
+}
+.panel-default{
+    border-color: #000;
+}
 .new_button
 {
   font-family : rubik;
@@ -5,9 +21,15 @@
 }
 .new_head
 {
-     background-image: linear-gradient(to bottom,#5f1797 0,#5f1797 100%) !important;
+     background-image: linear-gradient(to bottom,#000 0,#000 100%) !important;
      color:  #fff !important;
-     border-color: #5f1797 !important;
+     border-color: #000 !important;
+}
+.new_head .container{
+    
+    background-image: linear-gradient(to bottom,#5f1797 0,#5f1797 100%) !important;
+    padding-left: 0px;
+    margin-right: 0px;
 }
 .new_head li a
 {

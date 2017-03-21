@@ -1,6 +1,6 @@
 @include("layouts.partials.head")
 @include("layouts.partials.nav")
-<body>
+<body class="allContent">
     @include('layouts.partials.errors')
     @include('layouts.partials.success')
     @yield('content')
