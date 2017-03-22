@@ -21,15 +21,14 @@
 }
 .new_head
 {
-     background-image: linear-gradient(to bottom,#000 0,#000 100%) !important;
+     background-image: linear-gradient(to bottom,#5f1797 0,#5f1797 100%) !important;
      color:  #fff !important;
      border-color: #000 !important;
 }
-.new_head .container{
-    
-    background-image: linear-gradient(to bottom,#5f1797 0,#5f1797 100%) !important;
-    padding-left: 0px;
-    margin-right: 0px;
+
+.new_head .container_fluid .navbar-header{
+    background-color: #000;
+   padding-left: 0;
 }
 .new_head li a
 {
