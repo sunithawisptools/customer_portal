@@ -10,7 +10,7 @@
             </button>
             <span class="navbar-brand sonarhead">
                 @if(file_exists(base_path("/public/assets/images/logo.png")))
-                    <img src="/assets/images/logo.png" height="20px">
+                    <img src="/assets/images/logo.png" width="220px" style="margin-top: -34px">
                 @else
                     <img src="/assets/images/transparent_logo.png" height="20px">
                 @endif
