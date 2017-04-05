@@ -81,10 +81,12 @@ class SearchController extends Controller
 //        $homepage=  file_get_contents("http://192.168.0.104/test/sunitha/oauth-php-master/v3-php-sdk-2.2.0-RC/_Samples/createJournal.php?amt=".$sum);
 //        echo $homepage;
         $ch=  curl_init();
+        echo $date=date('Y-m-d');
+        $data_array=array('amt'=>$sum,'date'=>$date);
         $url="http://192.168.0.104/test/sunitha/oauth-php-master/v3-php-sdk-2.2.0-RC/_Samples/createJournal.php";
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, "amt=".$sum);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_array);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec ($ch); 
         curl_close ($ch); 
