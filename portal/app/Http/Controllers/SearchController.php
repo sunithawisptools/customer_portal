@@ -83,7 +83,7 @@ class SearchController extends Controller
         $ch=  curl_init();
         echo $date=date('Y-m-d');
         $data_array=array('amt'=>$sum,'date'=>$date);
-        $url="http://192.168.0.104/test/sunitha/oauth-php-master/v3-php-sdk-2.2.0-RC/_Samples/createJournal.php";
+        $url="http://192.168.0.104/test/sunitha/oauth-php-master/createJournal.php";
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_array);
