@@ -34,6 +34,7 @@ class SearchController extends Controller
         $page=1;
         $data= $this->apiController->complexSearch($entity,$size,$page,$from_date,$to_date);
         $data_values=$data->results;
+        print_r($data_values);
         $page_values=$data->paginator;
         $total_page=$page_values->total_pages;
         foreach($data_values as $temp)
@@ -61,35 +62,46 @@ class SearchController extends Controller
     {
         
         $sum=0;
-        $trans_data=$this->complexSearch("payments","2017-03-14 00:00:00","2017-03-16 00:00:00");
-         foreach($trans_data as $temp)
+        $sum_array=array();
+        $date=date('Y-m-d');
+        $prev_date = date('Y-m-d', strtotime($date .' -1 day'));
+        $trans_data=$this->complexSearch("payments",$prev_date." 00:00:00",$prev_date." 23:59:59");
+        foreach($trans_data as $temp)
+        {
+            if($temp){
+          $sum_array[$temp->type]=0;
+            }
+        }
+        print_r($sum_array);
+        foreach($trans_data as $temp)
              {
                  if($temp)
                  {
-                     echo "</br>";
-                     echo "Amount :".$temp->amount;
-                   $sum=$sum+$temp->amount;
+                         $sum_array[$temp->type]=$sum_array[$temp->type]+$temp->amount; 
                  }
              }
-        echo "</br>";
-        echo "SUM: ".$sum;
-        $this->createQuickbookEntry($sum);
+            echo "</br>";
+            foreach ($sum_array as $key => $value) {
+            echo $key."_SUM: ".$value;
+            $this->createQuickbookEntry($value);
+        }
+        
+       
     
     }
     public function createQuickbookEntry($sum)
     {
-//        $homepage=  file_get_contents("http://192.168.0.104/test/sunitha/oauth-php-master/v3-php-sdk-2.2.0-RC/_Samples/createJournal.php?amt=".$sum);
-//        echo $homepage;
         $ch=  curl_init();
-        echo $date=date('Y-m-d');
+        $date=date('Y-m-d');
         $data_array=array('amt'=>$sum,'date'=>$date);
-        $url="http://192.168.0.104/test/sunitha/oauth-php-master/createJournal.php";
+        $url="http://{Oauth_url}/oauth-php-master/createJournal.php";
         curl_setopt($ch, CURLOPT_URL,$url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data_array);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec ($ch); 
         curl_close ($ch); 
+        echo "</br>";
         var_dump($output); 
 
     }
